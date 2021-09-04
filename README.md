@@ -1,20 +1,30 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+
+**Azure function **- 
+Resize Image as soon as **Picture 2.jpg** added to **input** container due to **Blob trigger** , Azure function execute code and resize same image with two new diffrent size and store images to **output** container.
+Following Azure resources have been used .
+**Azure Storage Account
+Azure Key Valut
+Azure Function App
+Azure Function**
+
+There are two code repositoy 
+1. **AZDEV-DSP_FA **- Azure Function code (code repo)   
+2. **Deployment** - Azure function deployemnt (ARM tempalte project)
 
 # Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
 
+1 Clone repository to your local machine using VScode or Visual studio 2017/2019..
+2.Create storage Account in Azure portal to execute Azure funtion in locally.
+3.Copy connection string of Storage Account 
+4.Open AZDEV-DSP_FA/local.settings.json file and past it in place of "YOUR CONNECTIONSTRING"
+5.Portal.azure.com => your storage account => Create New Container as "**input**"=> Upload any Image file(Rename as **Picture 2.jpg** and then uplod)
+6.Create new contianer as **output** 
+7.Now you can run azure funtion apps.
+8.Portal.azure.com =>upload Same Image file again , you can see azure function will trigger and it will generate two diffrents size file and place to output container
+
+Once you happy with execution , you can create CI pipeline using YAML file in Deployemnt repo.
+Then you can create Release pipeline to deploye into TST/SIT/PRD
 # Build and Test
 TODO: Describe and show how to build your code and run the tests. 
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
